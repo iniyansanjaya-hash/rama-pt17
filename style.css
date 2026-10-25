@@ -205,3 +205,23 @@ body {
   user-select: none;
   touch-action: none; 
       }
+/* Pastikan ini adalah class untuk kontainer utama aplikasi Safari kamu */
+.safari-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1c1c1e;
+    z-index: 99; /* Supaya menutupi home screen saat terbuka */
+    
+    /* Trik menyembunyikan aplikasi di bawah layar */
+    transform: translateY(100%); 
+    transition: transform 0.3s ease-out; /* Efek smooth geser ke atas */
+}
+
+/* Ketika class 'open' ditambahkan oleh JavaScript, Safari akan muncul */
+.safari-screen.open {
+    transform: translateY(0);
+            }
+                      
